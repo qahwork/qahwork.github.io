@@ -23,6 +23,8 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "QahWork"
+  #pronouns         : # example: "she/her"  
+  #bio              : "Short biography for the left-hand sidebar"
   location         : "South Korea"
   #employer         : "Red Brick University"
   #uri              : # URL
