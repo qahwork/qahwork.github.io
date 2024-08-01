@@ -22,13 +22,11 @@ repository               : "qahwork.github.io/"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  name             : "QahWork"
+  location         : "South Korea"
+  #employer         : "Red Brick University"
+  #uri              : # URL
+  email            : "kseungju@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
