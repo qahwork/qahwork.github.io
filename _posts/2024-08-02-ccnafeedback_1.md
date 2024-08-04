@@ -1,11 +1,10 @@
 ---
 title: 'Your Post Title'
-date: YYYY-MM-DD
-permalink: /posts/YYYY/MM/your-post-title/
+date: 2024-08-04
+permalink: /posts/2024/08/ccnafeedback_1/
 tags:
-  - tag1
-  - tag2
-  - tag3
+  - CCNA
+  - NETWORK
 ---
 
 Your content goes here.
