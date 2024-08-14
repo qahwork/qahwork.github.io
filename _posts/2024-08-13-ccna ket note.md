@@ -1,6 +1,6 @@
 ---
 title: 'CCNA Key points'
-date: 2024-08-08
+date: 2024-08-13
 permalink: /posts/2024/08/CCNA_noted/
 tags:
   - CCNA
@@ -13,13 +13,13 @@ Back_up_route = default_gateway
 
 ## CDP
 ```
-#cdp run //exec
+#cdp run //global
 #cdp enable // interface
 
 #sh cdp nei de //ip 볼수있음
 #sh cdp nei //간략
 ```
-
+cdp(cisco) vs lldp(multibender)
 ## AAA
 
 -Autehntication
@@ -37,9 +37,10 @@ allows the user to change to enable mode
 tasks the user can perform
 
 -Accounting
-tracks activity
+track activity
 records user commands
 log session statistics
+track user service
 
 -CoA
 updates session attributes
@@ -52,15 +53,16 @@ web policy,Passthrough
 
 
 ## Controller-Based NET
-north bound & south bound APIs
+north bound(aplication REST) & south bound(edge device) APIs
 configured using the physical infrastucture
 leverages controllers to handle network meangement
 centralized view of the network
 multiple device
-task automation <- limit recurrent managemnet cost
+task automation <- limit recurrent managemnet cost <- software upgrade(in deploy)
 increased scalability and managemnet options
 better control over, reduce complexity
 centralization of key 
+setting packet-handling policies
 
 
 ## vs Traditional NET
@@ -100,13 +102,18 @@ Learn - heard neighbor & receive hello
 Listen - waiting
 Speak - transmit & receive hello
 Standy - ready to forward if fails
-first hop redundancy - share virtual MAC & IP
+first hop redundancy(default gateway failure) - share virtual MAC & IP
 two router - active to standby / share virtual IP
+
+## FHRP
+auto faliover default gateway
+multi device -> single virtual IP
 
 ## cisco DNA Center DevM
 cloud, NetFlow, multiple
 Centralized
 APIS
+deploy a network faster(diff)
 
 ## vs Traditional DevM
 SSH, per-device, (firewall. VPN, IPS)
@@ -131,9 +138,11 @@ best path to non root
 
 ## WPA2-PSK
 ASCII(minimun - 8) hex
+PSK - personal 
 
-## RAIUS
+## RADIUS
 merge auth
+access-request packet <-> password
 
 ## TACAS+
 separates authentication and authonzation
@@ -142,10 +151,14 @@ separates authentication and authonzation
 hello 10 dead 40 (default)
 broadcast (if p2p no advertise)
 router ID - select highest ID (if has lookback <- highest)
+bandwidth(metric)
 
-## WLC
-AAA override allow(VLAN)
-CAPWAP
+## WLC(Wireless Lan Control)
+AAA override allow(VLAN) <-data path
+CAPWAP(light weight - management,roaming,SSID)
+LAG - link redundancy & load balancing 
+man in the middle - telnet
+
 
 ## query-response model
 TCP - establish
@@ -173,6 +186,8 @@ SNMP trap - restrict
 # Qos
 congestion - PQ,CVWFQ
 low-latency - voice & video
+exceed commit - policing
+MAX bandwidth - traffic shaping
 
 # inspection
 address binding
@@ -196,6 +211,7 @@ transmit frame same time, cable length limit exceed, one half duplex(duplex miss
 
 # VPN
 IPSEC site to site - tunnel ESP
+GRE<- muticast traffic + IPSEC(encrpt)
 
 # SSH
 ip (Domain_Name) (domain) <-before RSA
@@ -215,3 +231,25 @@ disconnect WLAN - flexconnect
 
 # lose smart phone
 PIN <- before second factor
+
+# what is reason...
+the cable connection betwwen the two devices is faulty.
+
+# portfast
+STP - learning, listenling, broadcast storm
+
+# trouble shooting
+err_disabled - link flapping
+
+# Random Early Detection 
+mitigate congestion by preventing  the queue from filing up
+drops lower-priority packets before it drops higher-priority packets
+
+# Privacy
+malicious code allow access by an unauthorized user
+multifactor - authentication app
+
+# cable
+SFP - Hot swap
+
+# virtu
