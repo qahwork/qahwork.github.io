@@ -105,6 +105,7 @@ Standy - ready to forward if fails
 first hop redundancy(default gateway failure) - share virtual MAC & IP
 two router - active to standby / share virtual IP
 
+
 ## FHRP
 auto faliover default gateway
 multi device -> single virtual IP
@@ -253,3 +254,6 @@ multifactor - authentication app
 SFP - Hot swap
 
 # virtu
+
+# Zeroday exploit
+new net vulnerability discover before fix it
